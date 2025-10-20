@@ -1,0 +1,10 @@
+.book-my-ride {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.booking-button {
+  transition: 0.6s ease-in-out;
+}
+.booking-button:hover {
+  background-color: rgb(34, 214, 34);
+  color: rgb(105, 1, 1);
+}

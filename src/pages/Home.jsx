@@ -1,9 +1,14 @@
 import React from "react";
+// import HeroSection from "../components/HeroSection";
+import ClientReviews from "../components/ClientReviews";
+import Services from "../components/Services";
 
 function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
+      {/* <Services /> */}
+      <ClientReviews />
+      {/* <HeroSection /> */}
     </div>
   );
 }
