@@ -1,3 +1,7 @@
+.scrolling-remove {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 .book-my-ride {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -8,3 +12,4 @@
   background-color: rgb(34, 214, 34);
   color: rgb(105, 1, 1);
 }
+/*  */

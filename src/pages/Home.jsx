@@ -1,14 +1,22 @@
 import React from "react";
-// import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/HeroSection";
 import ClientReviews from "../components/ClientReviews";
 import Services from "../components/Services";
+import PopularDestinations from "../components/PopularDestinations";
+import Contact from "./Contact";
+import WhyChooseUs from "../components/WhyChoiceUs";
+import PopularRoutes from "../components/PopularRoutes";
 
 function Home() {
   return (
-    <div>
-      {/* <Services /> */}
+    <div className="--font-display">
+      {/* <WhyChooseUs />
+      <PopularDestinations />
+      <Services />
       <ClientReviews />
-      {/* <HeroSection /> */}
+      <Contact /> */}
+      {/* <PopularRoutes /> */}
+      <HeroSection />
     </div>
   );
 }

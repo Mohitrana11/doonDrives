@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
+import "../styles/componentCSS/contactUs.css";
 const testimonials = [
   {
     name: "Sarah Johnson",
@@ -49,7 +49,7 @@ const ClientReviews = () => {
   return (
     <div className="w-full bg-white  px-[4%]">
       {" "}
-      <section className="w-full py-12 relative">
+      <section className="w-full py-12 relative ">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 ">
           What Our Clients Say
         </h2>
@@ -76,7 +76,7 @@ const ClientReviews = () => {
         {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-5 overflow-x-auto space-x-6 scrollbar-hide  items-end scroll-smooth  snap-x snap-mandatory"
+          className="flex gap-5 overflow-x-auto space-x-6 scrollbar-hide  items-end scroll-smooth  snap-x snap-mandatory  scrolling-remove scrollbar-hide py-4 px-2 "
         >
           {testimonials.map((item, index) => (
             <div

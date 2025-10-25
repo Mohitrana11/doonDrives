@@ -3,6 +3,14 @@
 @tailwind utilities;
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-el: 1100px;
+  --breakpoint-tw: 1200px;
+  --breakpoint-eig: 800px;
+  --breakpoint-sev: 700px;
+  --font-display: "Montserrat", "Poppins", sans-serif;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -11,5 +19,5 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Poppins";
 }

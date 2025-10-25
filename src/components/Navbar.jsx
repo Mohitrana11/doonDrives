@@ -1,34 +1,37 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+    <nav className="w-full h-[70px]   bg-white shadow-sm fixed top-0 left-0 z-50">
       <div className="w-full px-[4%] mx-auto  py-3 flex items-center justify-between">
         {/* Logo / Title */}
         <div className="flex items-center space-x-2">
           <span className="text-2xl md:text-2xl font-bold text-gray-900">
-            Tomar <span className="text-sky-500">Travels</span>
+            Doon <span className="text-sky-500">Drives</span>
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-700 font-medium gap-9 text-lg">
-          <li className="hover:text-sky-500 cursor-pointer transition nav-list">
+        <ul className="hidden md:flex space-x-8 text-gray-800 font-medium gap-9 text-xl">
+          <li className="relative group cursor-pointer transition hover:text-sky-700">
             Home
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
-          <li className="hover:text-sky-500 cursor-pointer transition">
-            About
+          <li className="relative group cursor-pointer transition  hover:text-sky-700">
+            Blog
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
-          <li className="hover:text-sky-500 cursor-pointer transition">
+          <li className="relative group cursor-pointer transition  hover:text-sky-700">
             Services
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
-          <li className="hover:text-sky-500 cursor-pointer transition">
+          <li className="relative group cursor-pointer transition  hover:text-sky-700">
             Contact
+            <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
         </ul>
 
@@ -50,16 +53,17 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-md px-6 py-4 space-y-4">
           <ul className="space-y-3 text-gray-700 font-medium">
-            <li className="md:hover:text-sky-500 cursor-pointer transition md:mb-0 md:bg-white mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-400 ">
+            <li className=" relative group cursor-pointer transition md:mb-0 md:bg-white mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-300 hover:via-sky-200 ">
               Home
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
             </li>
-            <li className="hover:text-sky-500 cursor-pointer transition md:mb-0 md:bg-white  mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-400">
+            <li className="hover:text-sky-500 cursor-pointer transition md:mb-0  mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-300 hover:via-sky-200 ">
               About
             </li>
-            <li className="hover:text-sky-500 cursor-pointer transition md:mb-0 md:bg-whitev mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-400">
+            <li className="hover:text-sky-500 cursor-pointer transition md:mb-0  mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-300 hover:via-sky-200 ">
               Services
             </li>
-            <li className="hover:text-sky-500 cursor-pointer transition md:mb-0 md:bg-white mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-400">
+            <li className="hover:text-sky-500 cursor-pointer transition md:mb-0  mb-4 px-4 py-2 rounded-lg bg-blue-100 hover:duration-150 hover:bg-sky-300 hover:via-sky-200 ">
               Contact
             </li>
           </ul>
