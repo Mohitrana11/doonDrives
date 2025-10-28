@@ -1,12 +1,14 @@
-import React from "react";
+import React, { lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
-import Blog from "./pages/Blog";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import PageNotFound from "./utils/PageNotFound";
-import Footer from "./components/Footer";
+// import Home from "./pages/Home";
+const Navbar = lazy(() => import("./components/Navbar"));
+const Blog = lazy(() => import("./pages/Blog"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PageNotFound = lazy(() => import("./utils/PageNotFound"));
+const Footer = lazy(() => import("./components/Footer"));
+const Services = lazy(() => import("./pages/Services")); // (check spelling: 'Services')
+const WhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
+const Home = lazy(() => import("./pages/Home"));
 function App() {
   return (
     <>
@@ -15,11 +17,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        {/* <Footer /> */}
+        <WhatsAppButton />
+        <Footer />
       </BrowserRouter>
     </>
   );

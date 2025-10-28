@@ -11,6 +11,8 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+
 const ServicesPage = () => {
   const services = [
     {
@@ -45,35 +47,27 @@ const ServicesPage = () => {
     },
   ];
 
-  const reasons = [
-    {
-      icon: <FaClock className="text-blue-500 text-3xl" />,
-      title: "On-Time Service",
-      desc: "Punctual pickup and drop-off guaranteed.",
-    },
-    {
-      icon: <FaShieldAlt className="text-indigo-500 text-3xl" />,
-      title: "Fully Insured",
-      desc: "Complete insurance coverage for peace of mind.",
-    },
-    {
-      icon: <FaUserTie className="text-blue-600 text-3xl" />,
-      title: "Professional Drivers",
-      desc: "Experienced, courteous, and licensed drivers.",
-    },
-  ];
-
   return (
-    <div className="w-full bg-gray-50 min-h-screen px-[4%]">
+    <div className="w-full h-full my-20   px-[4%]">
       {/* Premium Services Section */}
-      <section className="py-16 px-6 md:px-12 lg:px-20 md:mb-25">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+      <section className="px-6 lg:px-20 ">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-center mb-3"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
           Our Premium Services
-        </h2>
-        <p className="text-gray-600 text-center mb-10 max-w-2xl text-[17px] mx-auto">
+        </motion.h2>
+        <motion.p
+          className="text-gray-600 text-center mb-10 max-w-2xl text-[17px] mx-auto"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           From airport transfers to special events, we provide reliable and
           luxurious transportation solutions for every occasion.
-        </p>
+        </motion.p>
 
         {/* Service Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
@@ -89,35 +83,6 @@ const ServicesPage = () => {
                 {s.title}
               </h3>
               <p className="text-gray-600 text-start text-sm">{s.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="bg-gray-100 py-16 px-6 md:px-12 lg:px-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
-          Why Choose Us?
-        </h2>
-        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          We go above and beyond to ensure your travel experience is safe,
-          comfortable, and memorable.
-        </p>
-
-        {/* Reasons */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {reasons.map((r, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl p-8 shadow hover:shadow-md text-center transition-all duration-300"
-            >
-              <div className="flex justify-center mb-4 bg-blue-100 rounded-lg  p-2 w-10 m-auto ">
-                {r.icon}
-              </div>
-              <h3 className="font-semibold text-gray-800 mb-2 mt-2 text-[18px] my-2">
-                {r.title}
-              </h3>
-              <p className="text-gray-600 text-sm text-[16px]">{r.desc}</p>
             </div>
           ))}
         </div>

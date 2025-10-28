@@ -2,12 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @import "tailwindcss";
+@import "locomotive-scroll/dist/locomotive-scroll.css";
 
 @theme {
-  --breakpoint-el: 1100px;
-  --breakpoint-tw: 1200px;
-  --breakpoint-eig: 800px;
-  --breakpoint-sev: 700px;
+  --breakpoint-sml: 400px;
   --font-display: "Montserrat", "Poppins", sans-serif;
 }
 

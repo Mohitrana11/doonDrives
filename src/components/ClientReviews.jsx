@@ -1,38 +1,59 @@
 import React, { useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "../styles/componentCSS/contactUs.css";
+import { FaStar } from "react-icons/fa";
+import { RiAtFill } from "react-icons/ri";
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Business Executive",
-    text: "Outstanding service! The Mercedes S-Class was immaculate and the driver was professional and punctual. Made my business trip seamless and comfortable. Highly recommend for corporate travel.",
+    name: "Riya Thakur",
+    role: "Student, Dehradun",
+    image:
+      "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
+    text: "I often travel from Dehradun to Rishikesh for my college. Doon Drives has made my travel so easy and comfortable. The drivers are polite, and the cars are always clean. I really trust their service.",
+    rating: 4,
   },
   {
-    name: "Michael Chen",
-    role: "Wedding Planner",
-    text: "Perfect for our wedding day! The luxury vehicle was beautifully maintained and added such elegance to our special day. The team went above and beyond to ensure everything was perfect.",
+    name: "Vikas Rawat",
+    role: "Local Business Owner, Haridwar",
+    image:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
+    text: "I use Doon Drives regularly to go from Haridwar to Dehradun for work. They always arrive on time, and the booking process is simple. It’s a big help for my daily travel.",
+    rating: 5,
   },
   {
-    name: "Emily Rodriguez",
-    role: "Travel Blogger",
-    text: "Exceptional airport transfer service! Flight was delayed but they tracked it and adjusted pickup time automatically. Professional, reliable, and stress-free travel experience.",
+    name: "Kavita Joshi",
+    role: "Teacher, Rishikesh",
+    image:
+      "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=600",
+    text: "Last month, I booked a ride from Rishikesh to Mussoorie with Doon Drives. The journey was smooth, and the driver was very friendly. It felt safe and easy. I’ll definitely book again.",
+    rating: 4.5,
   },
   {
-    name: "David Thompson",
-    role: "Corporate Manager",
-    text: "Been using their services for over a year for corporate events. Consistently excellent service, luxury vehicles, and competitive pricing. They’ve become our go-to transportation partner.",
+    name: "Amit Negi",
+    role: "Tourist from Delhi",
+    image:
+      "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
+    text: "I visited Uttarakhand for a short trip and used Doon Drives to explore Haridwar and Mussoorie. The driver knew all the local spots and helped us plan better. Great experience for new visitors!",
+    rating: 5,
   },
   {
-    name: "Lisa Park",
-    role: "Event Coordinator",
-    text: "Amazing service for our group tour! The BMW X7 was spacious and comfortable for our family of 6. Driver was knowledgeable about local attractions and made great recommendations.",
+    name: "Sonal Mehra",
+    role: "Nurse, Dehradun",
+    image:
+      "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=600",
+    text: "I use Doon Drives to reach my hospital every day. The drivers are always kind and make sure I reach safely, even during late shifts. I’m really thankful for their service.",
+    rating: 5,
   },
   {
-    name: "James Wilson",
-    role: "Frequent Traveler",
-    text: "Top-notch luxury car rental service! Clean vehicles, professional drivers, and excellent customer service. The booking process was smooth and transparent pricing. Will definitely use again.",
+    name: "Rohit Bisht",
+    role: "Traveler, Mussoorie",
+    image:
+      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
+    text: "We booked Doon Drives for our family trip from Mussoorie to Haridwar. It was an easy and peaceful ride. The kids were comfortable, and the driver was patient throughout the journey.",
+    rating: 5,
   },
 ];
+import { motion } from "framer-motion";
 
 const ClientReviews = () => {
   const scrollRef = useRef(null);
@@ -47,28 +68,38 @@ const ClientReviews = () => {
   };
 
   return (
-    <div className="w-full bg-white  px-[4%]">
-      {" "}
-      <section className="w-full py-12 relative ">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 ">
+    <div className="w-full bg-white mt-16 px-[4%]">
+      <section className="w-full relative">
+        {/* Heading */}
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-center mb-3"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           What Our Clients Say
-        </h2>
-        <p className="text-gray-600 text-center text-[18px] mb-10 max-w-2xl mx-auto">
+        </motion.h2>
+        <motion.p
+          className="text-gray-600 text-center text-[18px] mb-10 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           Don’t just take our word for it. Here’s what our satisfied customers
           have to say about their experience with our premium car rental
           service.
-        </p>
+        </motion.p>
 
         {/* Scroll Buttons */}
         <button
           onClick={() => scroll("left")}
-          className="hidden md:flex absolute left-4 top-1/2 transform-translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200 transition"
+          className="hidden md:flex absolute left-4 top-[60%] -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200 transition"
         >
           <FaArrowLeft />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="hidden md:flex absolute right-4 top-1/2 transform-translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200 transition"
+          className="hidden md:flex absolute right-4 top-[60%] -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200 transition"
         >
           <FaArrowRight />
         </button>
@@ -76,16 +107,25 @@ const ClientReviews = () => {
         {/* Scrollable Cards */}
         <div
           ref={scrollRef}
-          className="flex gap-5 overflow-x-auto space-x-6 scrollbar-hide  items-end scroll-smooth  snap-x snap-mandatory  scrolling-remove scrollbar-hide py-4 px-2 "
+          className="flex gap-5 overflow-x-auto items-end scroll-smooth snap-x snap-mandatory py-4 px-2 scrollbar-hide scrolling-remove"
         >
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className=" h-[300px] min-w-[300] w-[300px] snap-center bg-white p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 flex-shrink-0 j items-end justify-between cursor-pointer hover:scale-105 hover:delay-100 "
+              className="h-[300px] min-w-[300px] w-[300px] snap-center bg-white p-6 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col justify-between cursor-pointer hover:scale-105"
             >
+              <div className="flex justify-end mb-2 text-yellow-400">
+                {Array.from({ length: Math.floor(item.rating) }).map((_, i) => (
+                  <FaStar key={i} className="pl-[2px]" />
+                ))}
+              </div>
               <p className="text-gray-700 italic mb-4">“{item.text}”</p>
-              <div className="flex  items-center  gap-3">
-                <div className="w-10 h-10 rounded-full bg-gray-300" />
+              <div className="flex items-center gap-3">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div>
                   <h4 className="font-semibold text-gray-800">{item.name}</h4>
                   <p className="text-gray-500 text-sm">{item.role}</p>
