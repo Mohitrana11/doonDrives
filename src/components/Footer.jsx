@@ -71,7 +71,7 @@ const Footer = () => {
           </motion.h3>
           <div className="flex space-x-4 text-xl ">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61583173851415&sfnsn=wa"
               className="hover:text-blue-500 transition-colors duration-200 mr-2 "
             >
               <FaFacebookF />
@@ -82,8 +82,9 @@ const Footer = () => {
             >
               <FaTwitter />
             </a>
+
             <a
-              href="#"
+              href="https://www.instagram.com/dundrive/"
               className="hover:text-pink-500 transition-colors duration-200 mr-2"
             >
               <FaInstagram />

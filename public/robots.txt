@@ -1,0 +1,6 @@
+# Allow all crawlers full access
+User-agent: *
+Allow: /
+
+# Specify your sitemap (important for SEO)
+Sitemap: https://dundrive.in/sitemap.xml

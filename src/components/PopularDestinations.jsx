@@ -14,6 +14,7 @@ import Valley_of_Flowers from "../assets/locations/Valley_of_Flowers.png";
 
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import Seo from "./Seo";
 
 const destinations = [
   {
@@ -117,96 +118,104 @@ const PopularDestinations = () => {
   };
 
   return (
-    <motion.div
-      className="w-full bg-white px-[4%]  relative"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7 }}
-    >
-      <motion.h2
-        className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
+    <>
+      <Seo
+        title="Top Travel Destinations from Dehradun | Mussoorie, Rishikesh, Haridwar & More | Dun Drive"
+        content="Discover the best tourist destinations from Dehradun with Dun Drive. Enjoy comfortable cab rides to Mussoorie, Rishikesh, Haridwar, Chakrata, and other scenic spots across Uttarakhand. Our drivers ensure safe and enjoyable travel experiences at affordable rates."
+        keyword="Dehradun to Mussoorie taxi, Dehradun to Rishikesh cab, Dehradun to Haridwar taxi, Dehradun sightseeing, tourist places near Dehradun, Uttarakhand travel cab, Doon hill station taxi, weekend trip from Dehradun, Dehradun to Chakrata taxi, Dehradun tourism travel"
+      />
+
+      <motion.div
+        className="w-full bg-white px-[4%]  relative"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
+        transition={{ duration: 0.7 }}
       >
-        Popular Destinations
-      </motion.h2>
-      <motion.p
-        className="text-gray-600 text-lg mb-10"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.3 }}
-      >
-        Vacations to make your experience enjoyable in India!
-      </motion.p>
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+        >
+          Popular Destinations
+        </motion.h2>
+        <motion.p
+          className="text-gray-600 text-lg mb-10"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.3 }}
+        >
+          Vacations to make your experience enjoyable in India!
+        </motion.p>
 
-      {/* Buttons */}
-      <button
-        onClick={() => scroll("left")}
-        className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full hover:bg-gray-100 transition"
-      >
-        <FaArrowLeft />
-      </button>
-      <button
-        onClick={() => scroll("right")}
-        className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full hover:bg-gray-100 transition"
-      >
-        <FaArrowRight />
-      </button>
+        {/* Buttons */}
+        <button
+          onClick={() => scroll("left")}
+          className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full hover:bg-gray-100 transition"
+        >
+          <FaArrowLeft />
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 bg-white shadow-md p-3 rounded-full hover:bg-gray-100 transition"
+        >
+          <FaArrowRight />
+        </button>
 
-      {/* Scrollable Destination Cards */}
-      <div
-        ref={scrollRef}
-        className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hide  snap-x snap-mandatory  scrolling-remove scrollbar-hide py-4 px-2 "
-      >
-        {destinations.map((item, i) => (
-          <div
-            animate={{
-              scale: 2,
-              transition: { duration: 2 },
-            }}
-            key={i}
-            className="min-w-[260px] md:min-w-[300px] bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-300 snap-center flex-shrink-0 hover:scale-105 max-w-[350px]"
-          >
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full  h-48 object-cover rounded-t-2xl"
-              onClick={handleClick}
-            />
-            <div className="p-4 relative ">
-              <div className="flex items-center gap-2 text-gray-500 text-sm mb-1">
-                <FaMapMarkerAlt className="text-blue-500" />
-                <span>{item.location}</span>
-              </div>
-              <h3
+        {/* Scrollable Destination Cards */}
+        <div
+          ref={scrollRef}
+          className="flex overflow-x-auto gap-8 scroll-smooth scrollbar-hide  snap-x snap-mandatory  scrolling-remove scrollbar-hide py-4 px-2 "
+        >
+          {destinations.map((item, i) => (
+            <div
+              animate={{
+                scale: 2,
+                transition: { duration: 2 },
+              }}
+              key={i}
+              className="min-w-[260px] md:min-w-[300px] bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-300 snap-center flex-shrink-0 hover:scale-105 max-w-[350px]"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full  h-48 object-cover rounded-t-2xl"
                 onClick={handleClick}
-                className="text-lg font-semibold text-gray-800 mb-1"
-              >
-                {item.title}
-              </h3>
-              <p className="text-gray-500 text-sm mb-2">{item.duration}</p>
-              <p className="text-blue-500  text-md bottom-2.5">
-                {expandedIndex === i
-                  ? item.description
-                  : `${item.description.slice(0, 50)}...`}
-              </p>{" "}
-              <button
-                onClick={() => toggleReadMore(i)}
-                className="absolute right-3 bottom-2 text-gray-500 cursor-pointer text-sm font-medium  hover:underline focus:outline-none"
-              >
-                {expandedIndex === i ? "Read Less" : "Read More"}
-              </button>
+              />
+              <div className="p-4 relative ">
+                <div className="flex items-center gap-2 text-gray-500 text-sm mb-1">
+                  <FaMapMarkerAlt className="text-blue-500" />
+                  <span>{item.location}</span>
+                </div>
+                <h3
+                  onClick={handleClick}
+                  className="text-lg font-semibold text-gray-800 mb-1"
+                >
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm mb-2">{item.duration}</p>
+                <p className="text-blue-500  text-md bottom-2.5">
+                  {expandedIndex === i
+                    ? item.description
+                    : `${item.description.slice(0, 50)}...`}
+                </p>{" "}
+                <button
+                  onClick={() => toggleReadMore(i)}
+                  className="absolute right-3 bottom-2 text-gray-500 cursor-pointer text-sm font-medium  hover:underline focus:outline-none"
+                >
+                  {expandedIndex === i ? "Read Less" : "Read More"}
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Mobile swipe hint */}
-      <p className="text-center text-gray-400 text-sm mt-6 md:hidden">
-        ← Swipe to explore →
-      </p>
-    </motion.div>
+        {/* Mobile swipe hint */}
+        <p className="text-center text-gray-400 text-sm mt-6 md:hidden">
+          ← Swipe to explore →
+        </p>
+      </motion.div>
+    </>
   );
 };
 
