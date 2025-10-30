@@ -9,7 +9,7 @@ const testimonials = [
     role: "Student, Dehradun",
     image:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I often travel from Dehradun to Rishikesh for my college. Doon Drives has made my travel so easy and comfortable. The drivers are polite, and the cars are always clean. I really trust their service.",
+    text: "I often travel from Dehradun to Rishikesh for my college. dun Drives has made my travel so easy and comfortable. The drivers are polite, and the cars are always clean. I really trust their service.",
     rating: 4,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     role: "Local Business Owner, Haridwar",
     image:
       "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I use Doon Drives regularly to go from Haridwar to Dehradun for work. They always arrive on time, and the booking process is simple. It’s a big help for my daily travel.",
+    text: "I use dun Drives regularly to go from Haridwar to Dehradun for work. They always arrive on time, and the booking process is simple. It’s a big help for my daily travel.",
     rating: 5,
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Teacher, Rishikesh",
     image:
       "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "Last month, I booked a ride from Rishikesh to Mussoorie with Doon Drives. The journey was smooth, and the driver was very friendly. It felt safe and easy. I’ll definitely book again.",
+    text: "Last month, I booked a ride from Rishikesh to Mussoorie with dun Drives. The journey was smooth, and the driver was very friendly. It felt safe and easy. I’ll definitely book again.",
     rating: 4.5,
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     role: "Tourist from Delhi",
     image:
       "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I visited Uttarakhand for a short trip and used Doon Drives to explore Haridwar and Mussoorie. The driver knew all the local spots and helped us plan better. Great experience for new visitors!",
+    text: "I visited Uttarakhand for a short trip and used dun Drives to explore Haridwar and Mussoorie. The driver knew all the local spots and helped us plan better. Great experience for new visitors!",
     rating: 5,
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     role: "Nurse, Dehradun",
     image:
       "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I use Doon Drives to reach my hospital every day. The drivers are always kind and make sure I reach safely, even during late shifts. I’m really thankful for their service.",
+    text: "I use dun Drives to reach my hospital every day. The drivers are always kind and make sure I reach safely, even during late shifts. I’m really thankful for their service.",
     rating: 5,
   },
   {
@@ -49,12 +49,12 @@ const testimonials = [
     role: "Traveler, Mussoorie",
     image:
       "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "We booked Doon Drives for our family trip from Mussoorie to Haridwar. It was an easy and peaceful ride. The kids were comfortable, and the driver was patient throughout the journey.",
+    text: "We booked dun Drives for our family trip from Mussoorie to Haridwar. It was an easy and peaceful ride. The kids were comfortable, and the driver was patient throughout the journey.",
     rating: 5,
   },
 ];
 import { motion } from "framer-motion";
-
+import { fadeUp } from "../utils/Animation";
 const ClientReviews = () => {
   const scrollRef = useRef(null);
 
@@ -73,17 +73,17 @@ const ClientReviews = () => {
         {/* Heading */}
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-3"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp()}
         >
           What Our Clients Say
         </motion.h2>
         <motion.p
           className="text-gray-600 text-center text-[18px] mb-10 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp()}
         >
           Don’t just take our word for it. Here’s what our satisfied customers
           have to say about their experience with our premium car rental
@@ -125,6 +125,7 @@ const ClientReviews = () => {
                   src={item.image}
                   alt={item.name}
                   className="w-10 h-10 rounded-full object-cover"
+                  loading="lazy"
                 />
                 <div>
                   <h4 className="font-semibold text-gray-800">{item.name}</h4>

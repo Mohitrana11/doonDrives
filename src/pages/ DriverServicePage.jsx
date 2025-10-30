@@ -2,9 +2,10 @@ import React from "react";
 import { FaCarSide, FaUserTie, FaHeart, FaPhoneAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "../styles/shadow.css";
-import wedding_Car from "../assets/cars/wedding_Car.jpg";
-import artika from "../assets/cars/artika.webp";
+import wedding_Car from "../assets/cars/wedding_Car.webp";
+import artika from "../assets/cars/airportImg.webp";
 import Seo from "../components/Seo";
+import { fadeUp } from "../utils/Animation";
 
 const DriverServicePage = () => {
   return (
@@ -12,7 +13,7 @@ const DriverServicePage = () => {
       <Seo
         title="Airport Taxi & Professional Driver Service in Dehradun | Dun Drive"
         content="Dun Drive provides reliable airport transfer and driver services in Dehradun. Hire professional, experienced drivers for your local or outstation trips. Enjoy on-time pickups, clean vehicles, and 24/7 airport cab support from Jolly Grant Airport to any destination in Uttarakhand."
-        keyword="airport taxi Dehradun, Jolly Grant airport cab, driver service Dehradun, Dehradun airport pickup, Dehradun airport drop, outstation driver hire, Dehradun car with driver, airport transfer Uttarakhand, Doon airport taxi, 24/7 cab Dehradun"
+        keyword="airport taxi Dehradun, Jolly Grant airport cab, driver service Dehradun, Dehradun airport pickup, Dehradun airport drop, outstation driver hire, Dehradun car with driver, airport transfer Uttarakhand, dun airport taxi, 24/7 cab Dehradun"
       />
 
       <div className="w-full mt-[90px] min-h-screen bg-gray-50 py-10 px-[4%]">
@@ -46,17 +47,17 @@ const DriverServicePage = () => {
             <FaHeart className="text-pink-500 text-5xl mb-4" />
             <motion.h2
               className="text-2xl font-semibold text-gray-800 mb-2"
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp()}
             >
               Wedding Car Services
             </motion.h2>
             <motion.p
               className="text-gray-600 mb-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.4 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp()}
             >
               Make your wedding day more special with our beautifully decorated
               cars and professional drivers. From Dehradun to Mussoorie or
@@ -67,9 +68,9 @@ const DriverServicePage = () => {
               src={wedding_Car}
               alt="Wedding Car"
               className="w-full h-52 object-cover rounded-xl"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.4 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp()}
             />
           </div>
 
@@ -78,17 +79,17 @@ const DriverServicePage = () => {
             <FaUserTie className="text-blue-600 text-5xl mb-4" />
             <motion.h2
               className="text-2xl font-semibold text-gray-800 mb-2"
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp()}
             >
               Hire Professional Drivers
             </motion.h2>
             <motion.p
               className="text-gray-600 mb-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.2 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp()}
             >
               Need someone to drive your car while you relax? Our experienced
               drivers are available for part-time, full-day, and outstation
@@ -98,9 +99,9 @@ const DriverServicePage = () => {
               src={artika}
               alt="Professional Driver"
               className="w-full h-52 object-cover rounded-xl"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.4 }}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeUp()}
             />
           </div>
         </section>
@@ -109,9 +110,9 @@ const DriverServicePage = () => {
         <section className="bg-blue-50 rounded-2xl py-10 px-6 md:px-12 text-center mb-10">
           <motion.h2
             className="text-2xl font-semibold text-gray-800 mb-6"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeUp()}
           >
             Why Choose dun Drives?
           </motion.h2>
@@ -139,17 +140,17 @@ const DriverServicePage = () => {
         <section className="text-center">
           <motion.h3
             className="text-2xl font-semibold text-gray-800 mb-3"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeUp()}
           >
             Ready to Book Your Ride?
           </motion.h3>
           <motion.p
             className="text-gray-600 mb-6"
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0 }}
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeUp()}
           >
             Call us today and let our team help you plan your next ride with
             comfort and professionalism.

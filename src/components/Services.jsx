@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 
 import { motion } from "framer-motion";
+import { fadeUp } from "../utils/Animation";
 
 const ServicesPage = () => {
   const services = [
@@ -53,17 +54,17 @@ const ServicesPage = () => {
       <section className="px-6 lg:px-20 ">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-3"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp()}
         >
           Our Premium Services
         </motion.h2>
         <motion.p
           className="text-gray-600 text-center mb-10 max-w-2xl text-[17px] mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp()}
         >
           From airport transfers to special events, we provide reliable and
           luxurious transportation solutions for every occasion.

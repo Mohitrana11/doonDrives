@@ -1,20 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
 import "../styles/componentCSS/contactUs.css";
-import Haridwar from "../assets/locations/Haridwar.png";
-import Kedarnath from "../assets/locations/Kedarnath.jpg";
-import Mussoorie from "../assets/locations/Mussoorie.png";
-import Nainital from "../assets/locations/Nainital.png";
-import National_Park from "../assets/locations/National_Park.png";
-import Ranikhet from "../assets/locations/Ranikhet.webp";
-import Rishikesh from "../assets/locations/Rishikesh.jpg";
+import Haridwar from "../assets/locations/Haridwa.jpeg";
+import Kedarnath from "../assets/locations/Kedarnath.webp";
+import Mussoorie from "../assets/locations/Mussoori.webp";
+import Nainital from "../assets/locations/Nainita.webp";
+import National_Park from "../assets/locations/National_Park.webp";
+import Ranikhet from "../assets/locations/Rishikesh.webp";
+import Rishikesh from "../assets/locations/Rishikesh.webp";
 import Robber_Cave from "../assets/locations/Robber_Cave.jpg";
 import Tungnath from "../assets/locations/Tungnath.webp";
-import Valley_of_Flowers from "../assets/locations/Valley_of_Flowers.png";
+import Valley_of_Flowers from "../assets/locations/Valley_of_Flower.jpeg";
 
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Seo from "./Seo";
+import { fadeUp } from "../utils/Animation";
 
 const destinations = [
   {
@@ -122,28 +123,23 @@ const PopularDestinations = () => {
       <Seo
         title="Top Travel Destinations from Dehradun | Mussoorie, Rishikesh, Haridwar & More | Dun Drive"
         content="Discover the best tourist destinations from Dehradun with Dun Drive. Enjoy comfortable cab rides to Mussoorie, Rishikesh, Haridwar, Chakrata, and other scenic spots across Uttarakhand. Our drivers ensure safe and enjoyable travel experiences at affordable rates."
-        keyword="Dehradun to Mussoorie taxi, Dehradun to Rishikesh cab, Dehradun to Haridwar taxi, Dehradun sightseeing, tourist places near Dehradun, Uttarakhand travel cab, Doon hill station taxi, weekend trip from Dehradun, Dehradun to Chakrata taxi, Dehradun tourism travel"
+        keyword="Dehradun to Mussoorie taxi, Dehradun to Rishikesh cab, Dehradun to Haridwar taxi, Dehradun sightseeing, tourist places near Dehradun, Uttarakhand travel cab, dun hill station taxi, weekend trip from Dehradun, Dehradun to Chakrata taxi, Dehradun tourism travel"
       />
 
-      <motion.div
-        className="w-full bg-white px-[4%]  relative"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
+      <div className="w-full bg-white px-[4%]  relative">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-900 mb-2"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp()}
         >
           Popular Destinations
         </motion.h2>
         <motion.p
           className="text-gray-600 text-lg mb-10"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.3 }}
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeUp()}
         >
           Vacations to make your experience enjoyable in India!
         </motion.p>
@@ -177,6 +173,8 @@ const PopularDestinations = () => {
               className="min-w-[260px] md:min-w-[300px] bg-white rounded-2xl shadow hover:shadow-lg transition-all duration-300 snap-center flex-shrink-0 hover:scale-105 max-w-[350px]"
             >
               <img
+                fetchpriority="high"
+                decoding="async"
                 src={item.image}
                 alt={item.title}
                 className="w-full  h-48 object-cover rounded-t-2xl"
@@ -214,7 +212,7 @@ const PopularDestinations = () => {
         <p className="text-center text-gray-400 text-sm mt-6 md:hidden">
           ← Swipe to explore →
         </p>
-      </motion.div>
+      </div>
     </>
   );
 };

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// import { logo } from "../assets/logo.png";
 import { MdOutlinePhoneCallback } from "react-icons/md";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.webp";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -19,7 +18,7 @@ const Navbar = () => {
       <div className="w-full px-[4%] mx-auto  py-3 flex items-center justify-between">
         {/* Logo / Title */}
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="" className="w-[60px] h-[60px] rounded-full" />
+          <img src={logo} alt="" className="w-[50px] h-[40px] rounded-full" />
           <span className="text-2xl md:text-2xl font-bold text-gray-900">
             Dun <span className="text-sky-500">Drives</span>
           </span>
