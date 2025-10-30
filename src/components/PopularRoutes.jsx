@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FaCarSide } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Seo from "./Seo";
