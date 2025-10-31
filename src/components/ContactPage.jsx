@@ -119,7 +119,7 @@ const ContactPage = () => {
                 className="border-none rounded-lg bg-blue-50 text-[16px] px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
               />
 
-              <input
+              {/* <input
                 type="date"
                 name="date"
                 value={formData.date}
@@ -132,7 +132,7 @@ const ContactPage = () => {
                 value={formData.time}
                 onChange={handleChange}
                 className="border-none rounded-lg bg-blue-50 text-[16px] px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
-              />
+              /> */}
 
               <input
                 type="text"

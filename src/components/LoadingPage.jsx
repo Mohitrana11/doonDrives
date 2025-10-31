@@ -14,7 +14,7 @@ const LoadingPage = () => {
       </style>
       <div className="relative z-50 min-h-screen  flex flex-col items-center justify-center bg-gray-900 text-white ">
         <div className="flex space-x-2">
-          <h1 className="text-4xl">
+          <h1 className="text-2xl sm:text-4xl">
             Welcome to Dun <span className="text-green-400">Drive</span>
           </h1>
         </div>

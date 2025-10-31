@@ -6,7 +6,7 @@ import {
   FaPlaneDeparture,
 } from "react-icons/fa";
 import heroImage from "../assets/heroImage.webp";
-import Kedarnath from "../assets/locations/Kedarnath.webp";
+import Kedarnath from "../assets/locations/Kedarnath.jpg";
 import Rishikesh from "../assets/locations/Rishikesh.webp";
 import "../styles/shadow.css";
 // import { motion } from "motion/react";
@@ -17,14 +17,14 @@ import { fadeUp } from "../utils/Animation";
 import { Helmet } from "react-helmet";
 
 const HeroSection = () => {
-  const phoneNumber = "+919368169482";
+  const phoneNumber = "+918279317136";
 
   const handleCall = () => {
     window.location.href = `tel:${phoneNumber}`;
   };
   return (
     <>
-      <section className="w-full h-full  relative flex flex-col flex-wrap lg:flex-row items-center justify-between px-[4%] py-12 mt-10 sm:mt-15 lg:py-20 overflow-hidden bg-gray-110">
+      <section className="w-full h-full  relative flex flex-col flex-wrap lg:flex-row items-center justify-between px-[4%] py-12 mt-18 sm:mt-15 lg:py-20 overflow-hidden bg-gray-110">
         {/* Left Content */}
         <div className="w-full h-full lg:w-[50%] text-center lg:text-left mb-10 xm:mb-0 tw:bg-red-200 ">
           <motion.h1

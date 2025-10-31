@@ -91,6 +91,7 @@ const Navbar = () => {
             <Link
               to="/"
               className="relative group w-full text-center py-2 rounded-md hover:bg-blue-50 transition duration-200"
+              onClick={() => setMenuOpen(false)}
             >
               Home
               <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -99,6 +100,7 @@ const Navbar = () => {
             <Link
               to="/blog"
               className="relative group w-full text-center py-2 rounded-md hover:bg-blue-50 transition duration-200"
+              onClick={() => setMenuOpen(false)}
             >
               About
               <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -106,6 +108,7 @@ const Navbar = () => {
 
             <Link
               to="/services"
+              onClick={() => setMenuOpen(false)}
               className="relative group w-full text-center py-2 rounded-md hover:bg-blue-50 transition duration-200"
             >
               Services
@@ -114,6 +117,7 @@ const Navbar = () => {
 
             <Link
               to="/contact"
+              onClick={() => setMenuOpen(false)}
               className="relative group w-full text-center py-2 rounded-md hover:bg-blue-50 transition duration-200"
             >
               Contact
