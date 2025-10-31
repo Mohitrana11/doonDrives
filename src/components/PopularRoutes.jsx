@@ -127,7 +127,7 @@ const PopularRoutes = () => {
         keyword="Dehradun to Mussoorie taxi, Dehradun to Rishikesh cab, Dehradun to Haridwar taxi, Dehradun to Delhi cab, Dehradun to Kedarnath taxi, Dehradun to Nainital cab, Delhi to Dehradun taxi, Delhi to Mussoorie cab, Chandigarh to Shimla taxi, Chandigarh to Manali cab, Jolly Grant Airport taxi, Delhi Airport to Haridwar cab, outstation taxi Dehradun, North India taxi routes, one way cab Dehradun, Uttarakhand travel cab, Himachal taxi service, intercity cab booking, Dun Drive routes, best cab for hill stations"
       />
 
-      <div className="w-full h-full bg-gradient-to-b from-gray-50 to-white py-16 px-[4%] ">
+      <div className="w-full h-full  from-gray-50 to-white py-16 px-[4%] ">
         {/* Title Section */}
         <div className="text-center mb-12">
           <motion.h1

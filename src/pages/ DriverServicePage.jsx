@@ -4,18 +4,12 @@ import { motion } from "framer-motion";
 import "../styles/shadow.css";
 import wedding_Car from "../assets/cars/wedding_Car.webp";
 import artika from "../assets/cars/airportImg.webp";
-import Seo from "../components/Seo";
+
 import { fadeUp } from "../utils/Animation";
 
 const DriverServicePage = () => {
   return (
     <>
-      <Seo
-        title="Airport Taxi & Professional Driver Service in Dehradun | Dun Drive"
-        content="Dun Drive provides reliable airport transfer and driver services in Dehradun. Hire professional, experienced drivers for your local or outstation trips. Enjoy on-time pickups, clean vehicles, and 24/7 airport cab support from Jolly Grant Airport to any destination in Uttarakhand."
-        keyword="airport taxi Dehradun, Jolly Grant airport cab, driver service Dehradun, Dehradun airport pickup, Dehradun airport drop, outstation driver hire, Dehradun car with driver, airport transfer Uttarakhand, dun airport taxi, 24/7 cab Dehradun"
-      />
-
       <div className="w-full mt-[90px] min-h-screen bg-gray-50 py-10 px-[4%]">
         {/* Header Section */}
         <section className="text-center mb-10">

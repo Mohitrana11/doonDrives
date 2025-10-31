@@ -14,7 +14,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MdOutlinePhoneCallback } from "react-icons/md";
 import { fadeUp } from "../utils/Animation";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const HeroSection = () => {
   const phoneNumber = "+919368169482";
@@ -24,16 +24,6 @@ const HeroSection = () => {
   };
   return (
     <>
-      <Helmet>
-        <link
-          rel="preload"
-          as="image"
-          href={heroImage}
-          fetchpriority="high"
-          type="image/webp"
-        />
-      </Helmet>
-
       <section className="w-full h-full  relative flex flex-col flex-wrap lg:flex-row items-center justify-between px-[4%] py-12 mt-10 sm:mt-15 lg:py-20 overflow-hidden bg-gray-110">
         {/* Left Content */}
         <div className="w-full h-full lg:w-[50%] text-center lg:text-left mb-10 xm:mb-0 tw:bg-red-200 ">
@@ -117,7 +107,6 @@ const HeroSection = () => {
 
           <img
             alt="Traveler"
-            fetchpriority="high"
             decoding="async"
             width="700"
             height="700"

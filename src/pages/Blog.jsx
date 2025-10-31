@@ -3,8 +3,10 @@ import carImg from "../assets/cars/carImg.webp";
 import secondCar from "../assets/cars/secondCar.webp";
 import artika from "../assets/cars/artika.webp";
 import Seo from "../components/Seo";
+
 import { fadeUp } from "../utils/Animation";
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
+import { lazy } from "react";
 
 export default function Blog() {
   return (

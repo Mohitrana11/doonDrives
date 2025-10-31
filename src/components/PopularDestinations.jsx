@@ -175,6 +175,7 @@ const PopularDestinations = () => {
               <img
                 fetchpriority="high"
                 decoding="async"
+                loading="lazy"
                 src={item.image}
                 alt={item.title}
                 className="w-full  h-48 object-cover rounded-t-2xl"
