@@ -27,10 +27,10 @@ const DriverServicePage = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Whether it’s your special day or you need a trusted driver for your
-            vehicle, we’ve got you chtml overed. dun Drives provides reliable,
-            experienced, and verified drivers to make your journey smooth and
-            stress-free.
+            Whether it’s your special day or you simply need a trusted driver
+            for your vehicle, we’ve got you covered. Dun Drive provides
+            reliable, experienced, and verified drivers to ensure your journey
+            is smooth and stress-free.
           </motion.p>
         </section>
 
@@ -108,7 +108,7 @@ const DriverServicePage = () => {
             whileInView="visible"
             variants={fadeUp()}
           >
-            Why Choose dun Drives?
+            Why Choose dun drive?
           </motion.h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-gray-700">
             <div className="flex flex-col item-center justify-center text-[18px] bg-gray-50   p-4  h-[150px]  rounded-xl shadow">

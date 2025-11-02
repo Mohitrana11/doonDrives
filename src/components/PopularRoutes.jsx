@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { FaCarSide } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Seo from "./Seo";
@@ -67,26 +67,7 @@ const PopularRoutes = () => {
       "Delhi to Auli Taxi Service",
       "Delhi to Kedarnath Taxi",
     ],
-    [
-      "Delhi to Jaipur Taxi Service",
-      "Delhi to Agra Taxi Service",
-      "Delhi to Mathura Cab",
-      "Delhi to Vrindavan Taxi",
-      "Delhi to Lucknow Cab",
-      "Delhi to Varanasi Taxi",
-      "Delhi to Chandigarh Cab",
-      "Delhi to Shimla Taxi Service",
-    ],
-    [
-      "Chandigarh to Shimla Taxi Service",
-      "Chandigarh to Manali Cab",
-      "Chandigarh to Kasauli Taxi",
-      "Chandigarh to Dharamshala Cab",
-      "Chandigarh to Dalhousie Taxi Service",
-      "Jaipur to Agra Taxi",
-      "Jaipur to Delhi Cab Service",
-      "Jaipur to Ajmer Taxi Service",
-    ],
+
     [
       "Dehradun Airport (Jolly Grant) to Rishikesh Taxi",
       "Dehradun Airport to Haridwar Cab Service",
@@ -119,14 +100,21 @@ const PopularRoutes = () => {
     ],
   ];
 
+  const memoizedRoutes = useMemo(() => routesData, []);
+  const [visibleColumns, setVisibleColumns] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleColumns((prev) => {
+        if (prev < memoizedRoutes.length) return prev + 1;
+        clearInterval(interval);
+        return prev;
+      });
+    }, 200); // show next column every 400ms
+    return () => clearInterval(interval);
+  }, [memoizedRoutes.length]);
   return (
     <>
-      <Seo
-        title="Popular Taxi Routes from Dehradun, Delhi & Chandigarh | Dun Drive"
-        content="Explore Dun Drive’s most popular taxi routes across North India, including Dehradun to Mussoorie, Rishikesh, Haridwar, Auli, Kedarnath, and Nainital. We also offer one-way and round-trip cab services from Delhi, Chandigarh, and Jaipur to major tourist and business destinations. Book your comfortable and affordable ride today with our verified drivers and 24/7 customer support."
-        keyword="Dehradun to Mussoorie taxi, Dehradun to Rishikesh cab, Dehradun to Haridwar taxi, Dehradun to Delhi cab, Dehradun to Kedarnath taxi, Dehradun to Nainital cab, Delhi to Dehradun taxi, Delhi to Mussoorie cab, Chandigarh to Shimla taxi, Chandigarh to Manali cab, Jolly Grant Airport taxi, Delhi Airport to Haridwar cab, outstation taxi Dehradun, North India taxi routes, one way cab Dehradun, Uttarakhand travel cab, Himachal taxi service, intercity cab booking, Dun Drive routes, best cab for hill stations"
-      />
-
       <div className="w-full h-full  from-gray-50 to-white py-16 px-[4%] ">
         {/* Title Section */}
         <div className="text-center mb-12">
@@ -151,14 +139,8 @@ const PopularRoutes = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {routesData.map((col, idx) => (
-            <motion.div
-              key={idx}
-              className="flex flex-col gap-2"
-              variants={fadeUp()}
-              initial="hidden"
-              whileInView="visible"
-            >
+          {memoizedRoutes.slice(0, visibleColumns).map((col, idx) => (
+            <motion.div key={idx} className="flex flex-col gap-2">
               {col.map((route, i) => (
                 <a
                   key={i}

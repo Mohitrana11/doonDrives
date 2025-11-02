@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <img src={logo} alt="" className="w-[50px] h-[40px] rounded-full" />
           <span className="text-2xl md:text-2xl font-bold text-gray-900">
-            Dun <span className="text-sky-500">Drives</span>
+            Dun <span className="text-sky-500">Drive</span>
           </span>
           {/* <img src={logo} alt="" /> */}
         </div>

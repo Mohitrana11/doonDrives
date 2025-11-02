@@ -152,9 +152,10 @@ const Footer = () => {
             <li className="flex items-start gap-3">
               <MdLocationOn className="text-xl text-purple-400 mt-0.5" />
               <div>
-                <p className="font-medium text-white">Visit Us</p>
-                <p>123 Business District</p>
-                <p>Downtown, City 12345</p>
+                <span>
+                  near IT Park, Kasturi Nagar,
+                  <br /> Danda Lakhond, Dehradun.
+                </span>
               </div>
             </li>
           </ul>
@@ -169,7 +170,7 @@ const Footer = () => {
             <p className="text-sm text-gray-300 mb-1">
               Available 24/7 for urgent assistance
             </p>
-            <p className="text-white font-semibold">91+ 8279317136</p>
+            <p className="text-white font-semibold">91+ 7617651437</p>
           </motion.div>
         </div>
       </div>
@@ -177,7 +178,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="text-center text-xs text-gray-400 mt-6">
         <p>
-          © 2025 Dun Drives. All rights reserved. | Licensed & Insured
+          © 2025 dun drive. All rights reserved. | Licensed & Insured
           Transportation Service
         </p>
         <p className="mt-2">

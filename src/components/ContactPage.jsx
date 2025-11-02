@@ -207,7 +207,7 @@ const ContactPage = () => {
                 <FaMapMarkerAlt className="text-purple-500" />
                 <span>
                   near IT Park, Kasturi Nagar,
-                  <br /> Danda Lakhond, Dehradun. Downtown, City 12345
+                  <br /> Danda Lakhond, Dehradun.
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-700">

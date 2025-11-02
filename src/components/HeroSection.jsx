@@ -14,7 +14,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { MdOutlinePhoneCallback } from "react-icons/md";
 import { fadeUp } from "../utils/Animation";
-import { Helmet } from "react-helmet";
 
 const HeroSection = () => {
   const phoneNumber = "+918279317136";
@@ -33,7 +32,7 @@ const HeroSection = () => {
             whileInView="visible"
             variants={fadeUp()}
           >
-            India’s Most Trusted <br /> Taxi Service
+            Uttarakhand’s Most Trusted <br /> Taxi Service
           </motion.h1>
           <motion.p
             className="text-gray-600  text-[17px] sm:text-lg mb-8"
@@ -106,10 +105,11 @@ const HeroSection = () => {
           </div>
 
           <img
-            alt="Traveler"
             decoding="async"
+            alt="Traveler"
             width="700"
             height="700"
+            fetchpriority="high"
             src={heroImage}
             className="absolute sml:w-[324px] sml:top-25 sm:w-[480px]  sm:top-5  md:top-15 lg:top-21 md:w-[515px] lg:w-[530px] xl:w-[600px] xl:top-25 z-4 lg:max-w-[550px] 2xl:w-[700px] 2xl:top-34 rounded-full  object-contain cursor-pointer"
           />
@@ -122,8 +122,9 @@ const HeroSection = () => {
             transition={{ duration: 0.2 }}
           >
             <img
-              loading="lazy"
               src={Kedarnath}
+              decoding="async"
+              fetchpriority="high"
               alt="Kedarnath"
               className="w-full h-24 rounded-xl object-cover mb-2"
             />
@@ -144,8 +145,8 @@ const HeroSection = () => {
             transition={{ duration: 0.2 }}
           >
             <img
-              loading="lazy"
               src={Rishikesh}
+              loading="lazy"
               alt="Mussoorie"
               className="w-full h-20 rounded-xl object-cover mb-2"
             />

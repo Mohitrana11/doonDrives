@@ -5,9 +5,6 @@ import artika from "../assets/cars/artika.webp";
 import Seo from "../components/Seo";
 
 import { fadeUp } from "../utils/Animation";
-import { Helmet } from "react-helmet";
-import { lazy } from "react";
-
 export default function Blog() {
   return (
     <>
@@ -26,7 +23,7 @@ export default function Blog() {
             whileInView="visible"
             variants={fadeUp()}
           >
-            Understand About <span className="text-blue-600">dun Drives</span>
+            Understand About <span className="text-blue-600">dun drive</span>
           </motion.h1>
           <motion.p
             className="text-[16px] sm:text-lg text-gray-600 leading-relaxed"
@@ -34,9 +31,9 @@ export default function Blog() {
             whileInView="visible"
             variants={fadeUp()}
           >
-            Welcome to <strong>Dun Drives</strong> — your trusted tour and
-            travel partner in India. Established in 2007, we specialize in
-            providing affordable, safe, and reliable{" "}
+            Welcome to <strong>dun drive</strong> — your trusted tour and travel
+            partner in India. Established in 2007, we specialize in providing
+            affordable, safe, and reliable{" "}
             <strong>cab services in Dehradun</strong> and across Uttarakhand
             (India). Whether you're traveling for leisure, business, or
             pilgrimage, our mission is to make your journey comfortable and
@@ -51,7 +48,7 @@ export default function Blog() {
               fetchpriority="high"
               decoding="async"
               src={carImg}
-              alt="dun Drives car service in Dehradun"
+              alt="dun drive car service in Dehradun"
               className=" absolute w-[400px] h-[300px] sm:w-[600px] md:[700px xl:w-[800px] xl:h-[350px] rounded-2xl  shadow-lg  object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
@@ -59,7 +56,7 @@ export default function Blog() {
               fetchpriority="high"
               decoding="async"
               src={carImg}
-              alt="dun Drives car service in Dehradun"
+              alt="dun drive car service in Dehradun"
               className="absolute bottom-9 right-3 w-[100px] h-[70px] md:right-20 lg:right-3 xl:bottom-0 xl:right-10 rounded-xl   object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -78,7 +75,7 @@ export default function Blog() {
               whileInView="visible"
               variants={fadeUp()}
             >
-              At <strong>dun Drives</strong>, we believe in three things —{" "}
+              At <strong>dun drive</strong>, we believe in three things —{" "}
               <strong>reliability, punctuality, and comfort.</strong> Our fleet
               includes clean, well-maintained vehicles like Sedans, SUVs, and
               MUVs. Whether you need a <strong>local taxi in Dehradun</strong>,
@@ -115,7 +112,7 @@ export default function Blog() {
               fetchpriority="high"
               decoding="async"
               src={carImg}
-              alt="dun Drives car service in Dehradun"
+              alt="dun drive car service in Dehradun"
               className=" absolute w-[400px] h-[300px] sm:w-[600px] md:[700px xl:w-[800px] xl:h-[350px] rounded-2xl  shadow-lg  object-cover hover:scale-105 transition-transform duration-300"
             />
             <img
@@ -123,7 +120,7 @@ export default function Blog() {
               fetchpriority="high"
               decoding="async"
               src={carImg}
-              alt="dun Drives car service in Dehradun"
+              alt="dun drive car service in Dehradun"
               className="absolute bottom-9 right-3 w-[100px] h-[70px] md:right-20 lg:right-3 xl:bottom-0 xl:right-10 rounded-xl   object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
@@ -136,7 +133,7 @@ export default function Blog() {
               variants={fadeUp()}
             >
               Book Delhi to Badrinath Taxi with{" "}
-              <span className="text-blue-600">dun Drives</span>
+              <span className="text-blue-600">dun drive</span>
             </motion.h2>
 
             <motion.p
@@ -157,7 +154,7 @@ export default function Blog() {
             >
               Our <strong>Delhi to Badrinath cab service</strong> offers
               comfortable rides through the scenic Himalayan roads. With{" "}
-              <strong>dun Drives</strong>, you can choose from Sedans,
+              <strong>dun drive</strong>, you can choose from Sedans,
               Hatchbacks, and SUVs — all driven by experienced and professional
               drivers.
             </motion.p>
@@ -342,7 +339,7 @@ export default function Blog() {
             Our Services & Experiences
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto mb-10">
-            Experience hassle-free travel with dun Drives — the most{" "}
+            Experience hassle-free travel with dun drive — the most{" "}
             <strong>affordable cab service in Dehradun</strong>. We provide{" "}
             <strong>
               local taxi services, airport transfers, and Uttarakhand tours
