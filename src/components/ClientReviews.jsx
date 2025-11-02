@@ -9,7 +9,7 @@ const testimonials = [
     role: "Student, Dehradun",
     image:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I often travel from Dehradun to Rishikesh for my college. dun drive has made my travel so easy and comfortable. The drivers are polite, and the cars are always clean. I really trust their service.",
+    text: "I often travel from Dehradun to Rishikesh for my college. dun Drives has made my travel so easy and comfortable. The drivers are polite, and the cars are always clean. I really trust their service.",
     rating: 4,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     role: "Local Business Owner, Haridwar",
     image:
       "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I use dun drive regularly to go from Haridwar to Dehradun for work. They always arrive on time, and the booking process is simple. It’s a big help for my daily travel.",
+    text: "I use dun Drives regularly to go from Haridwar to Dehradun for work. They always arrive on time, and the booking process is simple. It’s a big help for my daily travel.",
     rating: 5,
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
     role: "Teacher, Rishikesh",
     image:
       "https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "Last month, I booked a ride from Rishikesh to Mussoorie with dun drive. The journey was smooth, and the driver was very friendly. It felt safe and easy. I’ll definitely book again.",
+    text: "Last month, I booked a ride from Rishikesh to Mussoorie with dun Drives. The journey was smooth, and the driver was very friendly. It felt safe and easy. I’ll definitely book again.",
     rating: 4.5,
   },
   {
@@ -33,7 +33,7 @@ const testimonials = [
     role: "Tourist from Delhi",
     image:
       "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I visited Uttarakhand for a short trip and used dun drive to explore Haridwar and Mussoorie. The driver knew all the local spots and helped us plan better. Great experience for new visitors!",
+    text: "I visited Uttarakhand for a short trip and used dun Drives to explore Haridwar and Mussoorie. The driver knew all the local spots and helped us plan better. Great experience for new visitors!",
     rating: 5,
   },
   {
@@ -41,7 +41,7 @@ const testimonials = [
     role: "Nurse, Dehradun",
     image:
       "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "I use dun drive to reach my hospital every day. The drivers are always kind and make sure I reach safely, even during late shifts. I’m really thankful for their service.",
+    text: "I use dun Drives to reach my hospital every day. The drivers are always kind and make sure I reach safely, even during late shifts. I’m really thankful for their service.",
     rating: 5,
   },
   {
@@ -49,7 +49,7 @@ const testimonials = [
     role: "Traveler, Mussoorie",
     image:
       "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
-    text: "We booked dun drive for our family trip from Mussoorie to Haridwar. It was an easy and peaceful ride. The kids were comfortable, and the driver was patient throughout the journey.",
+    text: "We booked dun Drives for our family trip from Mussoorie to Haridwar. It was an easy and peaceful ride. The kids were comfortable, and the driver was patient throughout the journey.",
     rating: 5,
   },
 ];
