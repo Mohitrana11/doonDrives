@@ -11,6 +11,8 @@ const WhatsAppButton = lazy(() => import("./components/WhatsAppButton"));
 const Home = lazy(() => import("./pages/Home"));
 import { Toaster } from "react-hot-toast";
 import LoadingPage from "./components/LoadingPage";
+import DestinationCard from "./components/DestinationCard";
+import DoonTour from "./pages/DoonTour";
 function App() {
   return (
     <>
@@ -22,6 +24,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/doontour" element={<DoonTour />} />
+            <Route path="/dis" element={<DestinationCard />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <WhatsAppButton />

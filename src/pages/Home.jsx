@@ -3,6 +3,8 @@ import ScrollWrapper from "../utils/ScrollWrapper";
 import DriverServicePage from "./ DriverServicePage";
 import LoadingPage from "../components/LoadingPage";
 import Seo from "../components/Seo";
+import DiscountBanner from "../components/DiscountBanner";
+import DoonTour from "./DoonTour";
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const ClientReviews = lazy(() => import("../components/ClientReviews"));
 const Services = lazy(() => import("../components/Services"));
@@ -24,9 +26,11 @@ function Home() {
 
       <div className="--font-display">
         <Suspense fallback={<LoadingPage />}>
+          <DiscountBanner />
           <HeroSection />
           <ScrollWrapper>
             <PopularDestinations />
+            <DoonTour />
             <Services />
             <Blog />
             <DriverServicePage />

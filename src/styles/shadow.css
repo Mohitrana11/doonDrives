@@ -15,3 +15,414 @@
 .choose-box {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+/* ================= Banner Container ================= */
+
+.discount-banner {
+  width: 100%;
+  min-height: 85px;
+  background: linear-gradient(270deg, #1d4ed8, #0a369d, #2563eb);
+  background-size: 400% 400%;
+  animation: gradientMove 18s ease infinite;
+
+  color: #ffffff;
+  padding: 16px 30px;
+  position: sticky;
+  top: 70px;
+  z-index: 2000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.discount-banner.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ================= Left Section ================= */
+
+.banner-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.bolt-icon {
+  font-size: 28px;
+  color: #ffea00;
+}
+
+.banner-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.banner-subtitle {
+  font-size: 14px;
+  margin: 4px 0 0;
+  opacity: 0.9;
+}
+
+/* ================= Right Section ================= */
+
+.banner-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.book-btn {
+  padding: 10px 24px;
+  background: #ffc107;
+  color: #1e3a8a;
+  border: none;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: rotate(90deg);
+}
+
+/* ================= Animations ================= */
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ================= Mobile Responsive ================= */
+
+@media (max-width: 650px) {
+  .discount-banner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 18px;
+  }
+
+  .banner-left {
+    justify-content: center;
+  }
+
+  .banner-title {
+    font-size: 18px;
+  }
+
+  .banner-right {
+    justify-content: center;
+  }
+}
+
+/* Styling of DoonTour*/
+
+.doon-tour-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 30px 50px;
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* --- Typography --- */
+.page-heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.page-sub-text {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  color: #475569;
+  line-height: 1.8;
+}
+
+/* --- Filter Section --- */
+.filter-section {
+  margin-bottom: 40px;
+  padding: 0 10px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  padding: 10px 15px;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+  color: #94a3b8;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  flex-grow: 1;
+  padding: 5px 0;
+  color: #1e293b;
+}
+
+.category-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.category-button {
+  padding: 8px 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 20px;
+  background: #fff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.active-category-button {
+  background: #3b82f6;
+  color: #fff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
+/* --- Card Grid --- */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+  padding: 0 10px;
+}
+
+.place-card {
+  border-radius: 22px;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+/* --- ENHANCED IMAGE QUALITY SECTION --- */
+.slider-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+  border-radius: 22px 22px 0 0;
+  /* Prevents pixelated "bleeding" on the rounded corners */
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  mask-image: -webkit-radial-gradient(white, black);
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* SHARPNESS FIXES */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+
+  /* GPU ACCELERATION (Reduces blur during animations) */
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  /* VISUAL POP */
+  filter: saturate(1.02) brightness(1.01);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.place-card:hover .main-image {
+  transform: scale(1.08) translateZ(0);
+}
+
+/* --- Card Content --- */
+.card-content {
+  padding: 25px;
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #e0f2fe;
+  color: #0284c7;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.location-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #64748b;
+}
+
+.copy-button {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  border: 1px solid #3b82f6;
+  background: #fff;
+  color: #3b82f6;
+  cursor: pointer;
+}
+
+.distance-text {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 12px;
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.description-text {
+  color: #1e293b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.read-more-link {
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- Utility Components --- */
+.top-btn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  background: #3b82f6;
+  color: #fff;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+/* --- Responsive & High DPI Fixes --- */
+@media (max-width: 768px) {
+  .doon-tour-page {
+    padding: 50px 20px;
+  }
+  .page-heading {
+    font-size: 2rem;
+  }
+  .slider-image-wrapper {
+    height: 220px;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-image {
+    image-rendering: auto; /* Smoother rendering for smaller mobile screens */
+  }
+}
+
+/* Retina Display Sharpening */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .main-image {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Animations */
+.roll-in-fade {
+  opacity: 0;
+  animation: rollIn 0.8s forwards;
+}
+
+@keyframes rollIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

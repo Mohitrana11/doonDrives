@@ -170,7 +170,7 @@ const Footer = () => {
             <p className="text-sm text-gray-300 mb-1">
               Available 24/7 for urgent assistance
             </p>
-            <p className="text-white font-semibold">91+ 7617651437</p>
+            <p className="text-white font-semibold">91+ 8279317136</p>
           </motion.div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
 import "../styles/componentCSS/contactUs.css";
-import Haridwar from "../assets/locations/Haridwa.jpeg";
+import Haridwar from "../assets/locations/Haridwar.jpeg";
 import Kedarnath from "../assets/locations/Kedarnath.jpg";
-import Mussoorie from "../assets/locations/Mussoori.webp";
+import Mussoorie from "../assets/locations/mussorie.jpg";
 import Nainital from "../assets/locations/Nainita.webp";
 import National_Park from "../assets/locations/National_Park.webp";
 import Ranikhet from "../assets/locations/Ranikhet.webp";
@@ -11,7 +11,6 @@ import Rishikesh from "../assets/locations/Rishikesh.webp";
 import Robber_Cave from "../assets/locations/Robber_Cave.jpg";
 import Tungnath from "../assets/locations/Tungnath.webp";
 import Valley_of_Flowers from "../assets/locations/Valley_of_Flower.jpeg";
-
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Seo from "./Seo";
@@ -192,7 +191,7 @@ const PopularDestinations = () => {
                 >
                   {item.title}
                 </h3>
-                <p className="text-gray-500 text-sm mb-2">{item.duration}</p>
+                {/* <p className="text-gray-500 text-sm mb-2">{item.duration}</p> */}
                 <p className="text-blue-500  text-md bottom-2.5">
                   {expandedIndex === i
                     ? item.description

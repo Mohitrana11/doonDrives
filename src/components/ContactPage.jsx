@@ -35,6 +35,22 @@ const ContactPage = () => {
   };
   const sendEmail = (e) => {
     e.preventDefault();
+    const fullMessage = `
+--- QUOTE REQUEST ---
+
+Full Name: ${formData.name}
+Email: ${formData.email}
+Phone Number: ${formData.phone}
+
+Pickup Location: ${formData.pickup}
+Drop-off Location: ${formData.drop}
+Number of Passengers: ${formData.passenger}
+
+Special Requests/Details: 
+${formData.message || "N/A"}
+
+-------------------------
+`;
     emailjs
       .send(
         "service_3og5x68",
@@ -42,7 +58,7 @@ const ContactPage = () => {
         {
           from_name: formData.name,
           from_email: formData.email,
-          message: formData.message,
+          message: fullMessage,
           to_email: "dundrive07@gmail.com",
         },
         "1L-SITDGO7fGuZIxq"
