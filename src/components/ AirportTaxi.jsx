@@ -9,6 +9,10 @@ const routes = [
 ];
 
 const AirportTaxi = () => {
+  const phoneNumber = "+918279317136";
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
   return (
     <div className="min-h-screen bg-gray-50 py-16 px-6">
       {/* Heading */}
@@ -67,8 +71,9 @@ const AirportTaxi = () => {
               <Link
                 to={"/contact"}
                 className="mt-4 bg-black text-white px-6 py-4 rounded-lg hover:bg-gray-800"
+                onClick={handleCall}
               >
-                Book Taxi
+                Call Now
               </Link>
             </div>
           ))}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ServicesPage from "../components/Services";
 import DriverServicePage from "./ DriverServicePage";
 import Seo from "../components/Seo";
+import AirportTaxi from "../components/ AirportTaxi";
 function Services() {
   return (
     <>
@@ -14,6 +15,8 @@ function Services() {
       />
 
       <motion.div className="mt-[120px]">
+        <AirportTaxi />
+
         <ServicesPage />
         <DriverServicePage />
         <div className="my-20">
