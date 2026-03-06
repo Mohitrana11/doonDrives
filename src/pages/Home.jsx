@@ -5,15 +5,18 @@ import LoadingPage from "../components/LoadingPage";
 import Seo from "../components/Seo";
 import DiscountBanner from "../components/DiscountBanner";
 import DoonTour from "./DoonTour";
+import OtherServices from "./OtherServices";
+import SpecialDestinations from "../components/SpecialDestinations";
+import AirportTaxi from "../components/ AirportTaxi";
 const HeroSection = lazy(() => import("../components/HeroSection"));
 const ClientReviews = lazy(() => import("../components/ClientReviews"));
 const Services = lazy(() => import("../components/Services"));
-const PopularDestinations = lazy(() =>
-  import("../components/PopularDestinations")
+const PopularDestinations = lazy(
+  () => import("../components/PopularDestinations"),
 );
 const Contact = lazy(() => import("./Contact"));
 const PopularRoutes = lazy(() => import("../components/PopularRoutes"));
-const Blog = lazy(() => import("./Blog"));
+// const Blog = lazy(() => import("./Blog"));
 
 function Home() {
   return (
@@ -30,13 +33,14 @@ function Home() {
           <HeroSection />
           <ScrollWrapper>
             <PopularDestinations />
+            <OtherServices />
+            <AirportTaxi />
             <DoonTour />
-            <Services />
-            <Blog />
+            {/* <Services /> */}
             <DriverServicePage />
             <Contact />
             <ClientReviews />
-            <PopularRoutes />
+            <SpecialDestinations />
           </ScrollWrapper>
         </Suspense>
       </div>
